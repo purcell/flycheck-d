@@ -82,7 +82,7 @@
 
 (flycheck-define-checker d
   "A D syntax checker using D compiler."
-  :command ("dmd" "-debug" "-o-" "-property" "-wi" (eval (flycheck-d-base-dir)) source)
+  :command ("dmd" "-debug" "-o-" "-property" "-wi" "-unittest" (eval (flycheck-d-base-dir)) source)
   :error-patterns
   ((error line-start (file-name) "(" line "): Error: " (message) line-end)
    (warning line-start (file-name) "(" line "): Warning: " (message) line-end)
